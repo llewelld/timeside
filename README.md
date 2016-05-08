@@ -13,7 +13,7 @@ To execute, ensure the ``timeside`` executable and the ``passfile.dat`` are in t
 ```
 timeside <pin>
 ```
-Where <pin> is the number (up to 10 digits) you want to check.
+Where ``<pin>`` is the number (up to 10 digits) you want to check.
 
 ## Windows
 
@@ -25,6 +25,6 @@ To execute, ensure the ``timeside`` executable and the ``passfile.dat`` are in t
 ```
 timeside.exe <pin>
 ```
-Where <pin> is the number (up to 10 digits) you want to check.
+Where ``<pin>`` is the number (up to 10 digits) you want to check.
 
 
