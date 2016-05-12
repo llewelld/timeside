@@ -11,9 +11,9 @@ void hash_letter(char letter, uint32_t salt, char * buffer);
 bool check_password(char * filename, char * password);
 
 int main (int argc, char *argv[]) {
-	if ((argc != 2) || ((argc == 2) && strlen(argv[1]) > 4)) {
+	if ((argc != 2) || ((argc == 2) && strlen(argv[1]) > 10)) {
 		printf ("Syntax:\ttimeside <pin>\n");
-		printf ("\tWhere <pin> is a number up to 4 digits.\n");
+		printf ("\tWhere <pin> is a number up to 10 digits.\n");
 		printf ("\tReturns 1 if the pin is correct, 0 o/w.\n");
 	}
 	else {
@@ -56,6 +56,7 @@ bool check_password(char * filename, char * password) {
 			same = (pos == SHA_DIGEST_LENGTH);
 			letter++;
 		}
+		same &= (fread(hash, 1, 1, fh) == 0);
 		fclose(fh);
 	}
 	
